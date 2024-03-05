@@ -8,7 +8,8 @@
   --background-end-rgb: 255, 255, 255;
 
   --cor-principal: #009603;
-  --cor-principal-2: #4bff4e; 
+  --cor-principal-suave: #00b003;
+  --cor-principal-2: #4bff4e;
 }
 
 @media (prefers-color-scheme: dark) {

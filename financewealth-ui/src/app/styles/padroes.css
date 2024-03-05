@@ -1,0 +1,25 @@
+@import url(globals.css);
+
+/*header {
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 42px;
+    border: solid rgb(235, 235, 235);
+};*/
+
+h1 {
+    color: var(--cor-principal-suave);
+}
+
+h1 span {
+    color: var(--cor-principal)
+}
+
+.container {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
+}

@@ -1,12 +1,12 @@
 import Image from "next/image";
+import Container from "./components/Container";
+import Header from "./components/Header";
 
 export default function Home() {
   return (
-    <main class="w-full h-full flex justify-center align-middle bg-zinc-900 items-center">
-      <div class="gradiente m-1 p-2 text-5xl">
-        ....................
-      </div>
-      <p>Teste</p>
+    <main className="w-full h-full flex justify-center align-middle items-center">
+      <Header />
+      <Container height="320px" width="320px" list={['item','item','item']} fontsize="20px" />
     </main>
   )
 }
