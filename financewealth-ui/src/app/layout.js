@@ -6,7 +6,11 @@ import styled, { css } from 'styled-components';
 
 export const metadata = {
   title: "Finance Wealth",
-  description: "App desenvolvido em Next.js, Springboot Web, SQL Server, TailwindCSS & Styled Components"
+  description: "App desenvolvido em Next.js, Springboot Web, SQL Server & TailwindCSS",
+  icons: {
+    icon: '/fav32.png',
+    shortcut: '/fav96.png'
+  }
 };
 
 export default function RootLayout({ children }) {
@@ -15,4 +19,4 @@ export default function RootLayout({ children }) {
       <body className="bg-white">{children}</body>
     </html>
   );
-}
+};
