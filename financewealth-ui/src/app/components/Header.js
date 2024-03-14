@@ -2,8 +2,8 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import '../styles/padroes.css';
-import '../styles/header.css';
+import '../styles/padroes.scss';
+import '../styles/header.scss';
 
 const Header = () => {
     const aparecerLista = () => {

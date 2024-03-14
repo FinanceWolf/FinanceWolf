@@ -1,6 +1,6 @@
 "use client";
 
-import '../styles/padroes.css';
+import '../styles/padroes.scss';
 import styled from 'styled-components';
 
 const Container = ({list, height, width, title, fontsize}) => {

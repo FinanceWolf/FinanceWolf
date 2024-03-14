@@ -1,0 +1,15 @@
+{
+    "language":"en",
+    "LoginSection": {
+            "title":"Sign in",
+            "emailplaceholder":"Your email",
+            "passwordplaceholder":"Your password",
+            "keepLogin": "Remember me",
+            "showPass": "Show password"
+        },
+    "RegisterSection": {
+        "title":"Sign up",
+        "emailplaceholder":"Your email",
+        "passwordplaceholder":"Your password"
+    }
+}

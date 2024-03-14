@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Container from "./components/Container";
 import Header from "./components/Header";
-import Login from "./components/login/Login";
+//import Login from "./components/login/page";
 import Head from 'next/head';
 
 export default function Home() {
@@ -9,8 +9,7 @@ export default function Home() {
     <>
     <main className="w-full h-full flex justify-center align-middle items-center">
       <Header />
-      <Login />
     </main>
     </>
-  )
-}
+  );
+};

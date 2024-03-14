@@ -2,14 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400;1,500;1,700&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-
-  --cor-principal: #009603;
-  --cor-principal-suave: #00b003;
-  --cor-principal-2: #4bff4e;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,6 +32,7 @@ body {
   width: 100vw;
   height: 100vh;
   color: black;
+  font-family: "Poppins"
 }
 
 .gradiente {

@@ -1,0 +1,121 @@
+@import 'padroes';
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#lateralSection {
+    width: 57%;
+}
+
+#loginSection {
+    width: 43%;
+    /* border-left: 1px solid $corPrincipal; */
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 3.2em;
+}
+
+.internalLoginSection {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    width: 65%;
+    height: 70%;
+    margin-top: 32px;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inputContainer {
+    height: 68px;
+    position: relative;
+}
+
+.inputContainer svg, .showPass {
+    position: absolute;
+    top: 9px;
+}
+
+.inputContainer svg {
+    left: 6px;
+    width: 16px;
+}
+
+.showPass {
+    top: 7px;
+    right: 2px;
+}
+
+.inputSubmit {
+    transition: 250ms;
+    background-color: $corPrincipalSuave;
+    width: 92px;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    margin-top: 16px;
+    /* margin: 0 auto; */
+}
+
+.inputSubmit:hover {
+    background-color: $corPrincipal;
+}
+
+.checkboxContainer {
+    margin: 16px 0;
+}
+
+#keepLogin {
+    position: relative;
+    top: 1px;
+    margin-right: 8px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.trademark {
+    opacity: 0.6;
+}
+
+@mixin estilosInput($nomeInput) {
+    .input-#{$nomeInput}{
+        width: 100%;
+        height: 42px;
+        outline: none;
+        padding: 0 32px;
+    
+        border-bottom: 2px solid $corPrincipal;
+    }
+}
+
+@include estilosInput("text");
+@include estilosInput("email");
+@include estilosInput("pass");

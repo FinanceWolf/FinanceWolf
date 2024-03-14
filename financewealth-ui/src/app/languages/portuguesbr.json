@@ -1,0 +1,15 @@
+{
+    "language":"pt-br",
+    "LoginSection": {
+            "title":"Fazer login",
+            "emailplaceholder":"Seu email",
+            "passwordplaceholder":"Sua senha",
+            "keepLogin": "Manter-se logado",
+            "showPass": "Mostrar senha"
+        },
+    "RegisterSection": {
+        "title":"Cadastrar-se",
+        "emailplaceholder":"Seu email",
+        "passwordplaceholder":"Sua senha"
+    }
+}

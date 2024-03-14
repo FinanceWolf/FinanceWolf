@@ -1,4 +1,4 @@
-@import url('./globals.css');
+@import 'padroes';
 
 header {
     width: 100%;
@@ -12,7 +12,7 @@ header {
     width: 40px;
     height: 40px;
     border-radius: 50px;
-    background-color: var(--cor-principal-suave);
+    background-color: $corPrincipal;
 }
 
 .loginContainer svg {
