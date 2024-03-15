@@ -11,5 +11,8 @@
         "title":"Sign up",
         "emailplaceholder":"Your email",
         "passwordplaceholder":"Your password"
+    },
+    "Footer": {
+        "trademark":"2024 Project developed by DevSquad"
     }
 }
