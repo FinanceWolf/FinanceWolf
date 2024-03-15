@@ -11,5 +11,8 @@
         "title":"Cadastrar-se",
         "emailplaceholder":"Seu email",
         "passwordplaceholder":"Sua senha"
+    },
+    "Footer": {
+        "trademark":"2024 Projeto desenvolvido pela DevSquad"
     }
 }
