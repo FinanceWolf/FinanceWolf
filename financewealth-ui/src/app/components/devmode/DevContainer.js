@@ -1,4 +1,4 @@
-import '../../styles/defaults.scss';
+import '../../styles/padroes.scss';
 
 const DevContainer = ({path, name, description}) => {
     return(
