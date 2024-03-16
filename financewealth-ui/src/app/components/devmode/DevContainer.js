@@ -10,4 +10,4 @@ const DevContainer = ({path, name, description}) => {
     );
 };
 
-export default DevContainer
+export default DevContainer;

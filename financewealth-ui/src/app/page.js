@@ -10,7 +10,6 @@ import DevContainer from './components/devmode/DevContainer';
 
 export default function Home() {
   const [devMode, setDevMode] = useState(true);
-
   const devContainers = [
     {
       path: '/pages/login',
