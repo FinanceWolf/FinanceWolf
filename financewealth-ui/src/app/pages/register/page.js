@@ -1,4 +1,4 @@
-import LoginForm from '../../components/login/LoginForm';
+import RegisterForm from '../../components/User/register/RegisterForm';
 import { promises as fs } from 'fs';
 
 async function Register() {
@@ -6,14 +6,14 @@ async function Register() {
     const data = JSON.parse(languageFile);
 
     return(
-        <main>
+        <main id="registerPage">
             <section id="lateralSection">
-                <img src="/images/felippe.png" />
+                <img src="/images/LoginPageIcon.png" />
             </section>
             <section id="loginSection">
                 <div className="internalLoginSection">
-                    <h2>{data.LoginSection.title}</h2>
-                    <LoginForm />
+                    <h2>{data.RegisterSection.title}</h2>
+                    <RegisterForm />
                 </div>
                 <footer>
                     <span className="trademark">&copy; 2023 Projeto desenvolvido pela DevSquad</span>
@@ -23,4 +23,4 @@ async function Register() {
     );
 };
 
-export default Login
+export default Register;

@@ -2,8 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 import { promises as fs } from 'fs';
 import ShowPass from './ShowPass';
-import InputBox from './InputBox';
-import '../../styles/loginPage.scss';
+import '../../../styles/loginPage.scss';
 
 
 async function Login() {
@@ -15,7 +14,7 @@ async function Login() {
             <div id="inputBox" className="flex flex-col">
                 <div className="inputContainer">
                     <FontAwesomeIcon icon={faUser} />
-                    <input type="email" id="email" name="email" className="input-email" placeholder={translation.LoginSection.emailplaceholder} />
+                    <input type="email" id="email" name="email" className="login-email" placeholder={translation.LoginSection.emailplaceholder} />
                 </div>
                 <div className="inputContainer">
                     <FontAwesomeIcon icon={faLock} />
@@ -27,7 +26,6 @@ async function Login() {
                 <label for="keepLogin">{translation.LoginSection.keepLogin}</label>
             </div>
             <input type="submit" value="Login" className="inputSubmit" />
-            <a>Fazer cadastro</a>
         </form>
     );
 };

@@ -1,0 +1,10 @@
+@import 'loginPage.scss';
+@import 'defaults.scss';
+
+input[type=text], input[type=email], input[type=password] {
+    padding: 0 6px;
+}
+
+.inputContainer {
+    height: auto;
+}

@@ -11,11 +11,24 @@ import DevContainer from './components/devmode/DevContainer';
 export default function Home() {
   const [devMode, setDevMode] = useState(true);
 
+  const devContainers = [
+    {
+      path: '/pages/login',
+      name: 'Página de login'
+    },
+    {
+      path: 'pages/register',
+      name: 'Página de registro'
+    }
+  ];
+
   return (
     <>
       <main className="w-full h-full flex justify-center align-middle items-center">
         <Header />
-        {devMode ? <DevContainer path="/pages/login" name="Página de login" /> : false}
+        <div className="flex gap-3">
+          {devMode ? devContainers.map((info) => {return <DevContainer path={info.path} name={info.name} />}) : false}
+        </div>
       </main>
     </>
   );

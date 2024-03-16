@@ -1,4 +1,7 @@
 @import 'defaults';
+@import 'functions/login&register';
+
+/* Login and register page */
 
 main {
     display: flex;
@@ -37,6 +40,15 @@ h2 {
     width: 65%;
     height: 70%;
     margin-top: 32px;
+
+    .createAccount {
+        position: relative;
+        color: $corPrincipalForte;
+        align-self: start;
+        border-bottom: 1px solid $corPrincipalForte;
+        padding: 0 3px 0 0;
+        top: 26px;
+    }
     
 }
 
@@ -47,6 +59,9 @@ form {
 }
 
 .inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     height: 68px;
     position: relative;
 }
@@ -69,17 +84,17 @@ form {
 .inputSubmit {
     transition: 250ms;
     background-color: $corPrincipalSuave;
-    width: 92px;
+    align-self: start;
     padding: 8px;
     border-radius: 4px;
     cursor: pointer;
     color: white;
     margin-top: 16px;
     /* margin: 0 auto; */
-}
 
-.inputSubmit:hover {
-    background-color: $corPrincipal;
+    &:hover {
+        background-color: $corPrincipal;
+    }
 }
 
 .checkboxContainer {
@@ -99,23 +114,17 @@ footer {
     bottom: 0;
     width: 100%;
     height: 80px;
-}
 
-.trademark {
-    opacity: 0.6;
-}
-
-@mixin estilosInput($nomeInput) {
-    .input-#{$nomeInput}{
-        width: 100%;
-        height: 42px;
-        outline: none;
-        padding: 0 32px;
-    
-        border-bottom: 2px solid $corPrincipal;
+    .trademark {
+        opacity: 0.6;
     }
 }
 
-@include estilosInput("text");
-@include estilosInput("email");
-@include estilosInput("pass");
+input[type=text], input[type=email], input[type=password] {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    padding: 0 32px;
+    
+    border-bottom: 2px solid $corPrincipal;
+}

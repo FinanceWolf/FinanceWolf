@@ -5,12 +5,18 @@
             "emailplaceholder":"Your email",
             "passwordplaceholder":"Your password",
             "keepLogin": "Remember me",
-            "showPass": "Show password"
+            "showPass": "Show password",
+            "createAccount":"Create an account"
         },
     "RegisterSection": {
         "title":"Sign up",
         "emailplaceholder":"Your email",
-        "passwordplaceholder":"Your password"
+        "passwordplaceholder":"Your password",
+        "confirmPassword":"Confirm your password",
+        "submit":"Create account",
+        "identityDocument":"Identity document",
+        "selectDefault":"Select an identity document",
+        "password":"Password"
     },
     "Footer": {
         "trademark":"2024 Project developed by DevSquad"

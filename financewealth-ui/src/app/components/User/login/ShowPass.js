@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react';
+import '../../../styles/registerPage.scss';
 
 const ShowPass = ({quote, placeholder}) => {
     const [mostrar, setMostrar] = useState(false);
@@ -12,7 +13,7 @@ const ShowPass = ({quote, placeholder}) => {
 
     return(
         <>
-            <input type={mostrar ? "text" : "password"} id="password" name="password" className="input-pass" placeholder={placeholder} />
+            <input type={mostrar ? "text" : "password"} id="password" name="password" className="login-pass" placeholder={placeholder} />
             <button onClick={mostrarSenha} className="showPass">{quote}</button>
         </>
     );
