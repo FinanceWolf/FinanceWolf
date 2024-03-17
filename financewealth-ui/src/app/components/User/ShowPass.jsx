@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from 'react';
-import '../../../styles/registerPage.scss';
 
 const ShowPass = ({quote, placeholder}) => {
     const [mostrar, setMostrar] = useState(false);

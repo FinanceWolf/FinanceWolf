@@ -10,13 +10,16 @@
         },
     "RegisterSection": {
         "title":"Cadastrar-se",
+        "password":"Senha",
+        "name":"Nome completo",
+        "nameplaceholder":"Seu nome",
         "emailplaceholder":"Seu email",
         "passwordplaceholder":"Sua senha",
         "confirmPassword":"Confirme sua senha",
         "submit":"Criar conta",
         "identityDocument":"Documento de identidade",
         "selectDefault":"Selecione um documento de identidade",
-        "password":"Senha"
+        "alreadyHaveAccount":"Já tenho uma conta"
     },
     "Footer": {
         "trademark":"2024 Projeto desenvolvido pela DevSquad"

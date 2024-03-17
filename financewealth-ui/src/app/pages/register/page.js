@@ -1,9 +1,10 @@
 import RegisterForm from '../../components/User/register/RegisterForm';
 import { promises as fs } from 'fs';
+import '../../styles/registerPage.scss';
 
 async function Register() {
     const languageFile = await fs.readFile(process.cwd() + '/src/app/languages/portuguesbr.json', 'utf8');
-    const data = JSON.parse(languageFile);
+    const translation = JSON.parse(languageFile);
 
     return(
         <main id="registerPage">
@@ -12,11 +13,12 @@ async function Register() {
             </section>
             <section id="loginSection">
                 <div className="internalLoginSection">
-                    <h2>{data.RegisterSection.title}</h2>
+                    <h2>{translation.RegisterSection.title}</h2>
                     <RegisterForm />
+                    <a href='/pages/login' className="createAccount">{translation.RegisterSection.alreadyHaveAccount}</a>
                 </div>
                 <footer>
-                    <span className="trademark">&copy; 2023 Projeto desenvolvido pela DevSquad</span>
+                    <span className="trademark">&copy; {translation.Footer.trademark}</span>
                 </footer>
             </section>
         </main>

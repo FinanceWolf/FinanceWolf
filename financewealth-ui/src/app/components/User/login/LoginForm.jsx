@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 import { promises as fs } from 'fs';
-import ShowPass from './ShowPass';
+import ShowPass from '../ShowPass';
 import '../../../styles/loginPage.scss';
 
 

@@ -120,11 +120,15 @@ footer {
     }
 }
 
-input[type=text], input[type=email], input[type=password] {
+input[type=text], input[type=email], input[type=password], .userInput {
     width: 100%;
     height: 40px;
     outline: none;
     padding: 0 32px;
     
     border-bottom: 2px solid $corPrincipal;
+}
+
+.login-pass {
+    padding-right: 138px !important;
 }

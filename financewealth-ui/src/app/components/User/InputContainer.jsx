@@ -5,7 +5,7 @@ const InputContainer = ({type, options, selectDefault, id, name, label, placehol
             {type == 'select' 
             
             ? 
-            <select>
+            <select id={id} name={name} className={className}>
                 <option selected="selected" disabled>{selectDefault}</option>
                 {options.map((data) => {return <option key={Math.random()} value={data.value}>{data.option}</option>})}
             </select> 
