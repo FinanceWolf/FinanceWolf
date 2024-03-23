@@ -8,8 +8,7 @@ export const metadata = {
   title: "Finance Wealth",
   description: "App desenvolvido em Next.js, Springboot Web, SQL Server & TailwindCSS",
   icons: {
-    icon: '/fav32.png',
-    shortcut: '/fav96.png'
+    icon: '/fav96.png'
   }
 };
 
