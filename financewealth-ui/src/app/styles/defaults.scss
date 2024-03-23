@@ -1,6 +1,5 @@
 @import url(globals.css);
 
-
 $corPrincipal: #009603;
 $corPrincipalSuave: #00b003;
 $corPrincipalForte: #005c02;
@@ -42,5 +41,26 @@ h1 span {
 
     span {
         color: rgb(184, 184, 184);
+    }
+}
+
+.mainFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    background-color: rgb(4, 23, 0);
+    color: white;
+
+    .bottomSection {
+        width: 65%;
+        border-top: 1px solid rgb(7, 40, 0);
+
+        .trademark {
+            color: rgb(206, 206, 206);
+        }
     }
 }
