@@ -7,7 +7,7 @@ import '../../../styles/registerPage.scss';
 
 
 async function Login() {
-    const languageFile = await fs.readFile(process.cwd() + '/src/app/languages/english.json', 'utf8');
+    const languageFile = await fs.readFile(process.cwd() + '/src/app/languages/portuguesbr.json', 'utf8');
     const translation = JSON.parse(languageFile);
 
     const countriesFile = await fs.readFile(process.cwd() + '/src/app/languages/countries.json', 'utf8');
@@ -18,12 +18,12 @@ async function Login() {
     return(
         <form method="POST">
             <div id="inputBox" className="flex flex-col">
-                <InputContainer type="nome" id="nome" name="nome" className="userInput" placeholder={translation.RegisterSection.nameplaceholder} label={translation.RegisterSection.name} />
+                <InputContainer type="nome" id="nome" name="nome" className="userInput" placeholder={translation.RegisterSection.nameplaceholder} label={translation.RegisterSection.name} required={true} />
 
-                <InputContainer type="email" id="email" name="email" className="userInput" placeholder={translation.LoginSection.emailplaceholder} label="Email" />
+                <InputContainer type="email" id="email" name="email" className="userInput" placeholder={translation.LoginSection.emailplaceholder} label="Email" required={true} />
 
                 <div className="inputContainer passwordContainer">
-                    <InputContainer type="password" id="password" name="password" className="userInput" placeholder={translation.LoginSection.passwordplaceholder} label={translation.RegisterSection.password} />
+                    <InputContainer type="password" id="pass" name="pass" className="userInput" placeholder={translation.LoginSection.passwordplaceholder} label={translation.RegisterSection.password} />
 
                     <InputContainer type="password" id="confPass" name="confPass" className="userInput" placeholder={translation.RegisterSection.passwordplaceholder} label={translation.RegisterSection.confirmPassword} />
                 </div>
