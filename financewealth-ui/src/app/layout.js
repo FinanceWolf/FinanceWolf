@@ -1,14 +1,15 @@
 import { Inter } from "next/font/google";
-import styled, { css } from 'styled-components';
 import "./styles/globals.css";
+import styled, { css } from 'styled-components';
 
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Finance Wealth",
-  description: "App desenvolvido em Next.js, Springboot Web, SQL Server & SASS",
+  description: "App desenvolvido em Next.js, Springboot Web, SQL Server & SCSS",
   icons: {
-    icon: '/fav96.png'
+    icon: '/fav32.png',
+    shortcut: '/fav96.png'
   }
 };
 

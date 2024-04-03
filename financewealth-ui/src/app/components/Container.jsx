@@ -3,10 +3,10 @@
 import '../styles/defaults.scss';
 import styled from 'styled-components';
 
-const Container = ({list, title, titlesize, fontsize, padding}) => {
+const Container = ({list, height, width, title, fontsize}) => {
     return(
-        <div className="container" style={{padding: padding}}>
-            {title ? <h2>{title}</h2> : null}
+        <div>
+            {title ? <h1>{title}</h1> : null}
             <ul>
                 {list ? list.map((item) => {return <li key={Math.random()}>{item}</li>}) : null}
             </ul>

@@ -22,7 +22,6 @@
         "alreadyHaveAccount":"I already have an account"
     },
     "Footer": {
-        "trademark":"2024 Project developed by DevSquad",
-        "completeTrademark":"Copyright &copy; 2024 - Developed by front-end team of DevSquad"
+        "trademark":"2024 Project developed by DevSquad"
     }
 }

@@ -1,0 +1,68 @@
+
+@import 'defaults';
+
+.banner {
+overflow: hidden;
+}
+
+.parallax-outer {
+    scroll-behavior: smooth;
+    .parallax {
+        height: 120vh;
+        position: relative;
+        transition: transform .5s;
+        img {
+            position: absolute;
+        }
+        
+
+    }
+    .montanha-1, .montanha-2, .montanha-3 {
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    .montanha-2 {
+        top: 150px;
+        z-index: 2;
+    }
+    .montanha-1 {
+        z-index: 3;
+    }
+
+    .copy {
+        @include display_flex();
+        flex-direction: column;
+        transition: transform .5s;
+        position: absolute;
+        left: 28%;
+        top: 35%;
+        opacity: 1;
+        transform: translate(-50%, -40%);
+        z-index: 4;
+        width: 50%;
+
+        .landing__titles {
+            position: relative;
+        }
+        
+        .landing__title {
+            font-weight: bold;
+            font-size: 4.4em;
+        }
+
+        .landing__subtitle {
+            position: relative;
+            text-align: left;
+            word-break: normal;
+            font-weight: 500;
+            color: $corPrincipal;
+            font-size: 1.9em;
+            bottom: 20px;
+        }
+
+        .landing__description {
+            font-size: 1.2em;
+        }
+    }
+}

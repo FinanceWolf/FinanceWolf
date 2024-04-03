@@ -1,0 +1,17 @@
+$mainColor: #efefef;
+
+footer {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 10px 22px;
+    background-color: black;
+    color: $mainColor;
+
+    .divisor {
+        width: 1px;
+        height: 100%;
+        margin: 0 6px;
+        background-color: $mainColor;
+    }
+}

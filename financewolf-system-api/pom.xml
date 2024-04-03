@@ -14,7 +14,19 @@
 	<name>financewolf-system-api</name>
 	<description>API do Finance Wolf</description>
 	<properties>
-		<java.version>22</java.version>
+		<java.version>21</java.version>
+
+		<!--  Propriedades JDBC SQL SERVER  -->
+            <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1337;databaseName=financewolf"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value="123456"/>
+
+            <!-- Configurações específicas do Hibernate -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
 	</properties>
 	<dependencies>
 		<dependency>

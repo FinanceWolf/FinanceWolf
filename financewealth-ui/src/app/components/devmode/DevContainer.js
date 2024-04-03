@@ -1,11 +1,31 @@
 import '../../styles/defaults.scss';
 
-const DevContainer = ({path, name, description}) => {
+const DevContainer = () => {
+    const devContainers = [
+        {
+          path: '/pages/login',
+          name: 'Página de login'
+        },
+        {
+          path: '/pages/register',
+          name: 'Página de registro'
+        },
+        {
+          path: '/pages/renda',
+          name: 'Pág. simulação de renda'
+        }
+      ];  
+
     return(
-        <div className="devContainer">
-            <a href={path}>{name}</a>
-            <span>{path}</span>
-            {description ? <p>{description}</p> : null}
+        <div className="debugContainer">
+                <ul>
+                    {devContainers.map((object) => {return (
+                        <li>
+                        <a href={object.path}>{object.name}</a>
+                        <span>{object.path}</span>
+                        </li>)})
+                    }
+                </ul>
         </div>
     );
 };

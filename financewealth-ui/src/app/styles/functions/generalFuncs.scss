@@ -1,0 +1,34 @@
+@mixin display_flex($direction: row, $justify: left, $align: top) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin transition($seconds: 200ms, $normalTransition: true, $transitionType: ease-in-out) {
+    @if $normalTransition {
+        transition: $seconds
+    } @else {
+        transition: $seconds $transitionType;
+    }
+}
+
+@mixin button($width: 100px, $height: 20px, $padding: 4px, $textColor, $backgroundColor, $borderRadius, $hoverBG: false) {
+    transition: 175ms;
+    cursor: pointer;
+    padding: 4px;
+    color: $textColor;
+    background-color: $backgroundColor;
+    border-radius: $borderRadius;
+    width: $width;
+    height: $height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @if($hoverBG) {
+        &:hover {
+            background-color: $hoverBG;
+        }
+    }
+}
