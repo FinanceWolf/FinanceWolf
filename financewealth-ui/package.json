@@ -18,7 +18,10 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
+<<<<<<< HEAD:package.json
+=======
     "react-scroll": "^1.9.0",
+>>>>>>> 479003ffca5d38d8603b7cb238848c834c75fe98:financewealth-ui/package.json
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
