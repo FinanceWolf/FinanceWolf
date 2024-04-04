@@ -1,17 +1,55 @@
-$mainColor: #efefef;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$textColor: #efefef;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 footer {
-    display: flex;
-    align-items: center;
-    height: 80px;
-    padding: 10px 22px;
-    background-color: black;
-    color: $mainColor;
+    .logo {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        align-items: center;
+        font-size: 35px;
+    }
 
+    svg {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+    
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: $textColor;
+    height: 350px;
+    padding: 8px 22px;
+    font-weight: bold;
     .divisor {
         width: 1px;
         height: 100%;
-        margin: 0 6px;
-        background-color: $mainColor;
+        margin: 12px;
+        background-color: $textColor;
+    }
+
+    .footer__navlist {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 24px;
+    }
+
+    .footer__routes {
+        display: flex;
+        flex-direction: column;
+        margin: 10px
     }
 }

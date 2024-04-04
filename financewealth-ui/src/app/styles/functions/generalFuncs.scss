@@ -13,22 +13,20 @@
     }
 }
 
-@mixin button($width: 100px, $height: 20px, $padding: 4px, $textColor, $backgroundColor, $borderRadius, $hoverBG: false) {
-    transition: 175ms;
-    cursor: pointer;
-    padding: 4px;
-    color: $textColor;
-    background-color: $backgroundColor;
-    border-radius: $borderRadius;
+@mixin button($width: 100px, $height: 40px, $bgColor, $txtColor, $Radius, $hColor) {
     width: $width;
     height: $height;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: $bgColor;
+    color: $txtColor;
+    border-radius: $Radius;
 
-    @if($hoverBG) {
-        &:hover {
-            background-color: $hoverBG;
-        }
+    transition: 175ms;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: $hColor;
     }
 }

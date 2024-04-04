@@ -1,41 +1,33 @@
 @import 'defaults';
 
-/* Base */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
-    padding: 30px 20px;
-    height: 40px;
+    padding: 30px 14px;
+    border-bottom: 1px solid rgb(240, 240, 240);
 
     h1 {
-        font-weight: bold;
-
         svg {
+            color: green;
+            font-size: 1.1em;
             position: relative;
             top: 1px;
-
-            color: green;
-            margin-right: 5px;
-            font-size: 1.1em;
+            margin-right: 6px;
         }
     }
 }
 
 /* Landing page */
 .header__rightside {
-    @include display_flex(row, center, center);
+    @include display_flex();
+    height: 40px;
     
     li {
-        font-weight: 300;
         cursor: pointer;
         margin: 0 10px;
-        font-size: .9em;
     }
 
     &__pages {
-        @include display_flex(row, center, center);
+        @include display_flex($align: center);
     }
 
     .language_section:hover {
@@ -44,7 +36,27 @@ header {
         filter: invert(48%) sepia(77%) saturate(400%) hue-rotate(86deg) brightness(100%);
     }
 
-    .createAccount {
+    .header__user {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        span {
+            font-weight: 500;
+            font-size: .9em;
+        }
+
+        svg {
+            background-color: green;
+            color: white;
+            width: 22px;
+            height: 24px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+    }
+
+    .create_account {
         @include transition(175ms);
 
         background-color: $corPrincipal;
@@ -58,10 +70,12 @@ header {
         }
     }
 
+
+
     /* Formatacoes */
     .header__rightside__pages {
         font-weight: 300;
-        font-size: 1.1em;
+        font-size: 0.86em;
 
         .option {
             height: 100%;

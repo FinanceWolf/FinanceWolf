@@ -1,8 +1,7 @@
-
 @import 'defaults';
 
 .banner {
-overflow: hidden;
+overflow-x: hidden;
 }
 
 .parallax-outer {
@@ -10,7 +9,6 @@ overflow: hidden;
     .parallax {
         height: 120vh;
         position: relative;
-        transition: transform .5s;
         img {
             position: absolute;
         }
@@ -21,6 +19,7 @@ overflow: hidden;
         top: 0;
         bottom: 0;
         z-index: 1;
+        @include transition($normalTransition: false, $transitionType: ease-out);
     }
     .montanha-2 {
         top: 150px;
@@ -33,12 +32,12 @@ overflow: hidden;
     .copy {
         @include display_flex();
         flex-direction: column;
-        transition: transform .5s;
         position: absolute;
+        @include transition($normalTransition: false, $transitionType: ease-out);
         left: 28%;
         top: 35%;
-        opacity: 1;
-        transform: translate(-50%, -40%);
+        opacity: 31;
+        transform: translate(-50%, -50%);
         z-index: 4;
         width: 50%;
 
@@ -62,7 +61,13 @@ overflow: hidden;
         }
 
         .landing__description {
+            position: relative;
+            bottom: 12px;
             font-size: 1.2em;
+        }
+
+        .landing__button {
+            @include button(132px, $bgColor: $corPrincipal, $txtColor: white, $Radius: 8px, $hColor: $corPrincipalSuave);
         }
     }
 }
