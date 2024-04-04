@@ -7,46 +7,51 @@ import { useState } from 'react';
 import "../../styles/landingPage.scss";
 import "../../styles/globals.css";
 
-const Portfolio = () => {
-  const [textoSelecionado, alterarTexto] = useState();
-  const selecionarCaixa = (e) => {
+const Services = () => {
+  const texts = {
+    default: "Texto menor - Lorem Ipsum Dolor.",
+    extended: "Texto maior - Lorem Ipsum Dolor Sit Amet."
+  }
+
+  const [selectedText, setText] = useState();
+  const selectBox = (e) => {
     e.preventDefault();
 
-    alterarTexto(e.currentTarget.id);
+    setText(e.currentTarget.id);
   }
 
     return (
         <section className='section__services'>
             <h1 className='title__services'>Lorem ipsum dolor.</h1>
             <div className="container__services">
-                <div className={`block__services ${textoSelecionado == '1' ? 'selected' : null}`}>
-                  <div className="icon__box" onClick={selecionarCaixa} id='1'>
+                <div className={`block__services ${selectedText == '1' ? 'selected' : null}`}>
+                  <div className="icon__box" onClick={selectBox} id='1'>
                     <FontAwesomeIcon icon={faDollarSign} />
                   </div>
                     <h3>Lorem ipsum dolor.</h3>
                     <div className="description_box">
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure tenetur beatae doloremque ad veritatis architecto porro suscipit ipsa qui sed?</p>
+                      <p>{selectedText == '1' ? texts.extended : texts.default}</p>
                     </div>
                 </div>
 
-                <div className={`block__services ${textoSelecionado == '2' ? 'selected' : null}`} onClick={selecionarCaixa} id='2'>
+                <div className={`block__services ${selectedText == '2' ? 'selected' : null}`} onClick={selectBox} id='2'>
                   <div className="icon__box">
                     <FontAwesomeIcon icon={faChartSimple} />
                   </div>
                     <h3>Lorem ipsum dolor.</h3>
                     <div className="description_box">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure tenetur beatae doloremque ad veritatis architecto porro suscipit ipsa qui sed?</p>
+                      <p>{selectedText == '2' ? texts.extended : texts.default}</p>
                     </div>
                 </div>
 
-                <div className={`block__services ${textoSelecionado == '3' ? 'selected' : null}`} onClick={selecionarCaixa} id='3'>
+                <div className={`block__services ${selectedText == '3' ? 'selected' : null}`} onClick={selectBox} id='3'>
                   <div className="icon__box">
                     <FontAwesomeIcon icon={faMagnifyingGlassDollar} />
                   </div>
                   
                     <h3>Lorem ipsum dolor.</h3>
                     <div className="description_box">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure tenetur beatae doloremque ad veritatis architecto porro suscipit ipsa qui sed?</p>
+                      <p>{selectedText == '3' ? texts.extended : texts.default}</p>
                     </div>
                 </div>
             </div>
@@ -54,4 +59,4 @@ const Portfolio = () => {
       )
     }
 
-export default Portfolio;
+export default Services;
