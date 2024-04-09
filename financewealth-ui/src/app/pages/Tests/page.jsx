@@ -1,9 +1,19 @@
-import Footer from "../../components/Footer/Footer"
+'use client';
+
+import Footer from "../../components/Footer/Footer";
+import {useDispatch, useSelector} from 'react-redux';
+import { increment, decrement } from "../../ReduxStore/testing/slicerTesting";
 
 const Tests = () => {
+    const counter = useSelector(state => state.counter.value);
+    const dispatch = useDispatch();
+
+    console.log(counter);
+
     return (
         <>
             <Footer />
+            <button style={{'border':'1px solid blue', 'width':'120px'}} onClick={() => {dispatch(increment())}}>Testar redux</button>
         </>
 
     )
