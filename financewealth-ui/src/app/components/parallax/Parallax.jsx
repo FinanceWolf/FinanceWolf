@@ -75,12 +75,12 @@ export default function Parallax() {
       </div>
       <div ref={copy} className="copy">
         <div class="landing__titles">
-          <h2 className="landing__title">Finance Wealth</h2>
-          <span className="landing__subtitle">A minha pomba te encanta</span>
+          <h2 className="landing__title">Finance Wolf</h2>
+          <span className="landing__subtitle">Le finance dolor sit</span>
         </div>
 
-        <span className="landing__description">Aqui na Finance Wolf nós bimbamos todas as ações. Aqui na Finance Wolf nós bimbamos todas as ações. Aqui na Finance Wolf nós bimbamos todas as ações. Aqui na Finance Wolf nós bimbamos todas as ações. Aqui na Finance Wolf nós bimbamos todas as ações. Aqui na Finance Wolf nós bimbamos todas as ações. </span>
-        <a className="landing__button">Bimbar a ação</a>
+        <span className="landing__description">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. </span>
+        <a className="landing__button">Vambora ent</a>
       </div>
     </div>
   )}
