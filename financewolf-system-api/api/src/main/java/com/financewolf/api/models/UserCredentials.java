@@ -6,16 +6,18 @@ import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "userCredentials")
+@Table(name = "user_credentials")
 public class UserCredentials {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long idUser;
 
     @Column (name = "name", length = 80, nullable = false)
     private String name;
@@ -35,18 +37,19 @@ public class UserCredentials {
     @Column (name = "datanasc", nullable = false)
     private Date birthdate;
 
-    @Column (name = "user_IdPass", length = 20, nullable = false)
-    private int idPassword; // Alterar depois. A senha vai em uma classe separada
+    @OneToOne
+    @JoinColumn(name = "idPassword")
+    private UserPassword idPassword;
     
     @Column (name = "datareg", nullable = false)
     private Date registerDate; // Alterar depois
 
     public Long getId() {
-        return id;
+        return idUser;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.idUser = id;
     }
 
     public String getName() {
@@ -97,14 +100,6 @@ public class UserCredentials {
         this.birthdate = birthdate;
     }
 
-    public int getIdPassword() {
-        return idPassword;
-    }
-
-    public void setIdPassword(int idPassword) {
-        this.idPassword = idPassword;
-    }
-
     public Date getRegisterDate() {
         return registerDate;
     }
@@ -117,15 +112,9 @@ public class UserCredentials {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((id == null) ? 0 : id.hashCode());
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
-        result = prime * result + ((username == null) ? 0 : username.hashCode());
         result = prime * result + ((email == null) ? 0 : email.hashCode());
         result = prime * result + ((rg == null) ? 0 : rg.hashCode());
         result = prime * result + ((cpf == null) ? 0 : cpf.hashCode());
-        result = prime * result + ((birthdate == null) ? 0 : birthdate.hashCode());
-        result = prime * result + idPassword;
-        result = prime * result + ((registerDate == null) ? 0 : registerDate.hashCode());
         return result;
     }
 
@@ -138,21 +127,6 @@ public class UserCredentials {
         if (getClass() != obj.getClass())
             return false;
         UserCredentials other = (UserCredentials) obj;
-        if (id == null) {
-            if (other.id != null)
-                return false;
-        } else if (!id.equals(other.id))
-            return false;
-        if (name == null) {
-            if (other.name != null)
-                return false;
-        } else if (!name.equals(other.name))
-            return false;
-        if (username == null) {
-            if (other.username != null)
-                return false;
-        } else if (!username.equals(other.username))
-            return false;
         if (email == null) {
             if (other.email != null)
                 return false;
@@ -167,18 +141,6 @@ public class UserCredentials {
             if (other.cpf != null)
                 return false;
         } else if (!cpf.equals(other.cpf))
-            return false;
-        if (birthdate == null) {
-            if (other.birthdate != null)
-                return false;
-        } else if (!birthdate.equals(other.birthdate))
-            return false;
-        if (idPassword != other.idPassword)
-            return false;
-        if (registerDate == null) {
-            if (other.registerDate != null)
-                return false;
-        } else if (!registerDate.equals(other.registerDate))
             return false;
         return true;
     }
