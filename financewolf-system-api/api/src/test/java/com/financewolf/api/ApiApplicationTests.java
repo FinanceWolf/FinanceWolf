@@ -1,10 +1,10 @@
-package com.financewolf.financewolfsystemapi;
+package com.financewolf.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FinancewolfSystemApiApplicationTests {
+class ApiApplicationTests {
 
 	@Test
 	void contextLoads() {

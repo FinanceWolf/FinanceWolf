@@ -19,8 +19,8 @@ export default function Home() {
 
   return (
     <>
-      <button style={{'border': '1px solid blue'}} onClick={() => {dispatch(alter({language: 'pt-br'})
-      )}}>Alterar idioma</button>
+      {/* <button style={{'border': '1px solid blue'}} onClick={() => {dispatch(alter({language: 'pt-br'})
+      )}}>Alterar idioma</button> */}
 
       <Header mode="landing" id="landingHeader" />
 

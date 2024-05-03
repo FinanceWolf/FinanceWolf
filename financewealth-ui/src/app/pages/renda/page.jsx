@@ -1,14 +1,24 @@
 'use client';
 
 import Header from '../../components/Header/Header';
+import { useState, useEffect, useRef } from 'react';
 import '../../styles/renda.scss';
 
 const SimuladorDeRenda = () => {
+    const [activeElement, setActive] = useState(0);
+    const element = useRef(null);
+    
     const menuSelection = (e) => {
         e.preventDefault();
-        
-        console.log(e.target.value);
+        setActive(e.target.value);
+
+        /* e.target.classList.add("BIMBAS"); */
     }
+
+    useEffect(() => {
+        console.log(element);
+
+    }, [activeElement]);
     
     return(
         <>
@@ -16,7 +26,7 @@ const SimuladorDeRenda = () => {
             <main>
                 <div className="simulationBox">
                     <nav>
-                        <ul>
+                        <ul ref={element}>
                             <li onClick={menuSelection} value='1'>Tesouro prefixado</li>
                             <li onClick={menuSelection} value='2'>Selic</li>
                             <li onClick={menuSelection} value='3'>IPCA+</li>

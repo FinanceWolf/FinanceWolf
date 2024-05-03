@@ -25,7 +25,7 @@ const Services = () => {
             <h1 className='title__services'>Lorem ipsum dolor.</h1>
             <div className="container__services">
                 <div className={`block__services ${selectedText == '1' ? 'selected' : null}`}>
-                  <div className="icon__box" onClick={selectBox} id='1'>
+                  <div className="icon__box" onHover={selectBox} id='1'>
                     <FontAwesomeIcon icon={faDollarSign} />
                   </div>
                     <h3>Lorem ipsum dolor.</h3>
@@ -34,7 +34,7 @@ const Services = () => {
                     </div>
                 </div>
 
-                <div className={`block__services ${selectedText == '2' ? 'selected' : null}`} onClick={selectBox} id='2'>
+                <div className={`block__services ${selectedText == '2' ? 'selected' : null}`} onHover={selectBox} id='2'>
                   <div className="icon__box">
                     <FontAwesomeIcon icon={faChartSimple} />
                   </div>
@@ -44,7 +44,7 @@ const Services = () => {
                     </div>
                 </div>
 
-                <div className={`block__services ${selectedText == '3' ? 'selected' : null}`} onClick={selectBox} id='3'>
+                <div className={`block__services ${selectedText == '3' ? 'selected' : null}`} onHover={selectBox} id='3'>
                   <div className="icon__box">
                     <FontAwesomeIcon icon={faMagnifyingGlassDollar} />
                   </div>

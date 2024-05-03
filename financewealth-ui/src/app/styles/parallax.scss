@@ -1,19 +1,17 @@
 @import 'defaults';
 
-.banner {
-overflow-x: hidden;
-}
-
 .parallax-outer {
     scroll-behavior: smooth;
+
     .parallax {
         height: 120vh;
         position: relative;
+
         img {
             position: absolute;
+            
         }
         
-
     }
     .montanha-1, .montanha-2, .montanha-3 {
         top: 0;
@@ -27,6 +25,7 @@ overflow-x: hidden;
     }
     .montanha-1 {
         z-index: 3;
+
     }
 
     .copy {

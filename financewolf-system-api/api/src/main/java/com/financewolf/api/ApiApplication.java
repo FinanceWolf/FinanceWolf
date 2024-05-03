@@ -1,13 +1,13 @@
-package com.financewolf.financewolfsystemapi;
+package com.financewolf.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FinancewolfSystemApiApplication {
+public class ApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FinancewolfSystemApiApplication.class, args);
+		SpringApplication.run(ApiApplication.class, args);
 	}
 
 }
