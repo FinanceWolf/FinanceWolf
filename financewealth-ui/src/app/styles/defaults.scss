@@ -9,11 +9,11 @@ $corPrincipal2: #03440c;
 $borderRadiusPadrao: 10px;
 
 h1 {
-    color: var(--cor-principal-suave);
+    color: $corPrincipalSuave;
 }
 
 h1 span {
-    color: var(--cor-principal)
+    color: $corPrincipal;
 }
 
 .container {

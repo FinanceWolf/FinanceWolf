@@ -1,0 +1,36 @@
+@import 'defaults';
+
+.welcome__page {
+    height: 80vh;
+    border: solid 3px red;    
+    &__text__box {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    
+        h1 {
+            font-size: clamp(.46em, 3.5vw, 4.5em);
+            font-weight: bold;
+            color: $corPrincipal;
+            text-transform: uppercase;
+        }
+    
+        p {
+            width: 750px;
+            font-size: clamp(.46em, 2vw, 1.5em);
+        }
+    
+        a {
+            margin-top: 3rem;
+            padding: 1rem;
+            border-radius: 15px;
+            border: solid 2px $corPrincipal;
+        }
+    }
+
+    &__image {
+        top: 0;
+    }    
+}

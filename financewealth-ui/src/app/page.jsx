@@ -10,6 +10,7 @@ import { alter } from './ReduxStore/selectedLanguage/language';
 import {useDispatch, useSelector} from 'react-redux';
 import './styles/home.scss';
 import './styles/landingPage.scss';
+import { WelcomePage } from "./components/WelcomePage/WelcomePage";
 
 export default function Home() {
   const language = useSelector(state => state.language.value);
@@ -25,11 +26,10 @@ export default function Home() {
       <Header mode="landing" id="landingHeader" />
 
       <main id="landingPage">
-        <section className="text__box">
-          <Parallax />
-        </section>
-        
+
+          <WelcomePage />
           <Portfolio />
+
       </main>
 
 {/*       <Footer /> */}

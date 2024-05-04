@@ -12,7 +12,7 @@ const Header = ({mode, id}) => {
       <a href="/">
         <h1 className="text-2xl select-none">
           <FontAwesomeIcon icon={faChartColumn} />
-          <span>Finance</span> Wealth
+          <span>Finance Wealth</span> 
         </h1>
       </a>
       <nav className="header__rightside">

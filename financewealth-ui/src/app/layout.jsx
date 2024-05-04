@@ -7,7 +7,7 @@ import "./styles/globals.css";
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Finance Wealth",
+  title: "Finance Wolf",
   description: "App desenvolvido em Next.js, Springboot Web, SQL Server & SCSS",
   icons: {
     icon: '/fav32.png',

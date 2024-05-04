@@ -13,6 +13,11 @@ header {
             top: 1px;
             margin-right: 6px;
         }
+
+        span {
+            font-size: clamp(.46em, 2vw, 1em);
+
+        }
     }
 }
 
@@ -75,7 +80,8 @@ header {
     /* Formatacoes */
     .header__rightside__pages {
         font-weight: 300;
-        font-size: 0.86em;
+        font-size: clamp(.46em, 2vw, 1em);
+
 
         .option {
             height: 100%;

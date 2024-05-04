@@ -120,13 +120,22 @@ footer {
     }
 }
 
-input[type=text], input[type=email], input[type=password], .userInput {
+input[type=text], input[type=email], input[type=password], input[type=number], .userInput {
     width: 100%;
     height: 40px;
     outline: none;
     padding: 0 32px;
     
     border-bottom: 2px solid $corPrincipal;
+}
+
+input[type=number] {
+    padding: 0 6px;
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
 }
 
 .login-pass {

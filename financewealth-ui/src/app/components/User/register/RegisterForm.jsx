@@ -18,7 +18,7 @@ async function Login() {
     return(
         <form method="POST">
             <div id="inputBox" className="flex flex-col">
-                <InputContainer type="nome" id="nome" name="nome" className="userInput" placeholder={translation.RegisterSection.nameplaceholder} label={translation.RegisterSection.name} />
+                <InputContainer type="text" id="nome" name="nome" className="userInput" placeholder={translation.RegisterSection.nameplaceholder} label={translation.RegisterSection.name} />
 
                 <InputContainer type="email" id="email" name="email" className="userInput" placeholder={translation.LoginSection.emailplaceholder} label="Email" />
 
@@ -32,6 +32,8 @@ async function Login() {
                         value: 'CPF',
                         option: 'CPF'
                     }]} id="identityDocument" name="identityDocument" required="true" label={translation.RegisterSection.identityDocument} className="registerSelect" />
+
+                    
 
                     {/* <InputContainer type="select" id="country" name="country" options={countries} /> */}
             </div>
