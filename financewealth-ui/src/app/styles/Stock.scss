@@ -1,0 +1,95 @@
+@import 'defaults.scss';
+@import '../styles/functions/generalFuncs.scss';
+
+.stockSection {
+    color: $textColorBlack;
+    font-size: clamp(.46em, 5vw, 1.3em);
+    height: 90vh;
+    @include display_flex($direction: row, $justify: space-around);
+
+    &__title {
+        @include display_flex($direction: column, $align: flex-end);
+        margin: 30px;
+
+
+        h1 {
+            font-size: clamp(.46em, 5vw, 2em);
+            color: $corPrincipal;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: .9;
+        }
+
+        p {
+            font-size: clamp(.46em, 5vw, 1.3em);
+            line-height: 3;
+        }
+
+        a {
+
+            border: solid 2px $corPrincipal;
+            margin: 10px 0px ;
+            padding: 10px;
+            font-size: clamp(.46em, 5vw, 1.3em);
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                text-decoration: none;
+                background-color: $corPrincipal;
+                transition: 0.3s ease-in-out;
+                color: $textColorBlack; 
+                padding: 20px;
+
+            }
+        }
+
+    }
+
+    
+}
+
+.stockWrapper {
+    @include display_flex($direction: row, $justify: space-around);
+}
+
+.cardSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 1px;
+    grid-column-gap: 30px;
+    align-content: stretch;
+    align-items: start;
+    margin: 30px;
+    height: 65vh;
+
+    span {
+        @include display_flex($justify: center, $align: center);
+        width: 10vw;
+    }
+
+    .card {
+        border-radius: 20px;
+        width: 10vw;
+        height: 11.5vw;
+        background-color: #dcdcdc;
+
+    }
+
+    &__button{
+        @include display_flex($justify: center, $align: center);
+        padding: 10px;        
+        width: 10vw;
+        border: solid 1px $corPrincipal;   
+        transition: 0.3s ease-in-out;
+        border-radius: 10px;
+
+        &:hover {
+            text-decoration: none;
+            background-color: $corPrincipal;
+            transition: 0.3s ease-in-out;
+            border-radius: 14px;
+
+        }
+    }
+}

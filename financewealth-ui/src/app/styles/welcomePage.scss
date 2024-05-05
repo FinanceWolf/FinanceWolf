@@ -1,36 +1,71 @@
 @import 'defaults';
+@import url(https://db.onlinewebfonts.com/c/1b99743bcb88cf33f2f85350f2023ac3?family=Champion-HTF-Bantamweight); 
 
-.welcome__page {
+.welcomePage {
+    display: flex;
+    justify-content: center;
+    background-color: #0b0c0c;
     height: 80vh;
-    border: solid 3px red;    
-    &__text__box {
+    
+    &__textBox {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        align-items: center;
         position: relative;
-    
+        margin: 30px;
+
         h1 {
-            font-size: clamp(.46em, 3.5vw, 4.5em);
-            font-weight: bold;
+            display: flex;
+            justify-content: flex-start;
+            font-size: clamp(.46em, 3.5vw, 5em);
+            font-weight: 900;
             color: $corPrincipal;
             text-transform: uppercase;
+            margin-bottom: 10px;
+}
+
+        &__subtitle {
+            color: red;
         }
     
         p {
             width: 750px;
             font-size: clamp(.46em, 2vw, 1.5em);
+            color: white;
         }
     
         a {
+            width: 9vw;
             margin-top: 3rem;
             padding: 1rem;
             border-radius: 15px;
             border: solid 2px $corPrincipal;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            transition: 0.3s ease-in-out;
+
+        }
+
+        a:hover {
+            transition: 0.3s ease-in-out;
+            background-color: $corPrincipal;
+            color: black;
+        }
+
+        .textBox__subtitle {
+            font-weight: bold;
         }
     }
 
     &__image {
-        top: 0;
+        display: flex;
+            align-items: flex-end;
+        img {
+            -webkit-transform: scaleX(-1);
+            -moz-transform: scaleX(-1);
+            transform: scaleX(-1);
+            width: 400px;
+        }       
     }    
 }

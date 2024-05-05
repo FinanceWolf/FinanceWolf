@@ -2,110 +2,137 @@
 
 header {
     width: 100%;
-    padding: 30px 14px;
-    border-bottom: 1px solid rgb(240, 240, 240);
+    padding: 38px 14px;
+    background-color: #2a2e34;
+    color: white;
 
     h1 {
         svg {
-            color: green;
+            color: $corPrincipal;
             font-size: 1.1em;
             position: relative;
-            top: 1px;
             margin-right: 6px;
+            top: 1px;
         }
-
-        span {
-            font-size: clamp(.46em, 2vw, 1em);
-
-        }
-    }
-}
-
-/* Landing page */
-.header__rightside {
-    @include display_flex();
-    height: 40px;
-    
-    li {
-        cursor: pointer;
-        margin: 0 10px;
-    }
-
-    &__pages {
-        @include display_flex($align: center);
-    }
-
-    .language_section:hover {
-        cursor: pointer;
-        transition: 0.1s ease all;
-        filter: invert(48%) sepia(77%) saturate(400%) hue-rotate(86deg) brightness(100%);
-    }
-
-    .header__user {
-        display: flex;
-        align-items: center;
-        gap: 4px;
 
         span {
             font-weight: 500;
-            font-size: .9em;
-        }
-
-        svg {
-            background-color: green;
+            font-size: clamp(.46em, 2vw, 1.2em);
             color: white;
-            width: 22px;
-            height: 24px;
-            padding: 10px;
-            border-radius: 20px;
         }
     }
 
-    .create_account {
-        @include transition(175ms);
-
-        background-color: $corPrincipal;
-        border-radius: $borderRadiusPadrao;
-        padding: 10px;
-        font-weight: 500;
-        color: white;
-
-        &:hover {
-            background-color: $corPrincipalSuave;
-        }
-    }
-
-
-
-    /* Formatacoes */
-    .header__rightside__pages {
-        font-weight: 300;
-        font-size: clamp(.46em, 2vw, 1em);
-
-
-        .option {
-            height: 100%;
-            padding: 6px;
+    /* Landing page */
+    .header__rightside {
+        @include display_flex();
+        height: 40px;
+        
+        li {
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 18px;
         }
 
-        .option:hover {
-            color: green;
-            font-weight: 500;
-            border-bottom: 2px solid green;
+        .language_section:hover {
+            cursor: pointer;
+            transition: 0.1s ease all;
+            filter: invert(48%) sepia(77%) saturate(400%) hue-rotate(86deg) brightness(100%);
         }
 
-        .login__button {
+        .header__user {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            span {
+                font-weight: 500;
+                font-size: .9em;
+            }
+
+            svg {
+                background-color: $corPrincipal;
+                color: white;
+                width: 22px;
+                height: 24px;
+                padding: 10px;
+                border-radius: 20px;
+            }
+        }
+
+        .create_account {
             @include transition(175ms);
 
-            font-weight: 500;
-            color: green;
-            background-color: rgb(242, 242, 242);
+            background-color: $corPrincipal;
             border-radius: $borderRadiusPadrao;
+            padding: 10px;
+            font-weight: 500;
+
 
             &:hover {
-                background-color: rgb(232, 232, 232);
-                border-bottom: none;
+                background-color: $corPrincipalForte;
             }
+        }
+
+
+
+        /* Formatacoes */
+        &Pages {
+            @include display_flex($direction: row, $justify: space-between, $align:center);
+            font-weight: 300;
+            font-size: clamp(.46em, 2vw, 1em);
+            
+            .option {
+                position: relative;
+                height: 100%;
+                padding: 8px 6px;
+                transition: font-weight 0.01s ease-in-out;
+                transition: color 0.3s ease-in-out;
+
+                &:hover {
+                    color: $corPrincipal;
+                    transition: color 0.3s ease-in-out;
+                    transition: font-weight 0.01s ease-in-out;
+                    font-weight: 400;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    border-bottom: solid 2px $corPrincipal;
+                    
+                    transform: scaleX(0);
+                    transition: transform 250ms ease-in-out;
+                    transform-origin: 0% 50%;
+                }
+                
+                &:hover:after {
+                    transform: scaleX(1);
+                }
+
+            }
+
+            .login__button {
+                @include transition(175ms);
+
+                font-weight: 500;
+                padding: 10px;
+                color: black;
+                background-color: rgb(242, 242, 242);
+                border-radius: $borderRadiusPadrao;
+
+                &:hover {
+                    background-color: rgb(232, 232, 232);
+                    border-bottom: none;
+                }
+            }
+
+            a {
+                color: white;
+            }
+
         }
     }
 }

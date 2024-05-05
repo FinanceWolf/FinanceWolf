@@ -11,6 +11,7 @@ const Footer = () => {
         <span>Finance Wolf</span>
       </div>
       <span className="divisor"></span>
+      <div className="footer__space">
         <div className="footer__navlist">
           <div className="footer__groups">
             <div className="footer__routes">
@@ -53,6 +54,7 @@ const Footer = () => {
               <a href="./pages/login">Login</a> 
             </div>
           </div>
+        </div>
         </div>
     </footer>
   )

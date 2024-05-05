@@ -1,6 +1,7 @@
+@import 'defaults.scss';
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-$textColor: #efefef;
 
 * {
     margin: 0;
@@ -30,7 +31,7 @@ footer {
     display: flex;
     flex-direction: row;
     background-color: black;
-    color: $textColor;
+    color: $textColorWhite;
     height: 350px;
     padding: 8px 22px;
     font-weight: bold;
@@ -38,7 +39,7 @@ footer {
         width: 1px;
         height: 100%;
         margin: 12px;
-        background-color: $textColor;
+        background-color: $textColorWhite;
     }
 
     .footer__navlist {
@@ -50,6 +51,16 @@ footer {
     .footer__routes {
         display: flex;
         flex-direction: column;
-        margin: 10px
+        margin: 10px;
+        a {
+            color: $textColorWhite;
+        }
+    }
+
+    .footer__space {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        margin: 10px;
     }
 }

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import "../../styles/registerPage.scss";
+import "../../styles/InputContainer.scss";
 
 const InputContainer = (props) => {
   const [cep, setCep] = useState();
@@ -9,6 +10,8 @@ const InputContainer = (props) => {
   const returnValue = (e) => {
     setCep(e.target.value);
   };
+
+  console.log(props.type);
 
   return (
     <div className="inputContainer">
@@ -29,13 +32,12 @@ const InputContainer = (props) => {
       ) : (
         <input
           type={props.type}
-          className={props.className}
+          className={props.type == 'submit' ? 'inputSubmit' : `userInput ${props.className} `}
           id={props.id}
           name={props.name}
           placeholder={props.placeholder}
           required={props.required ? "true" : "false"}
           onChange={returnValue}
-          change={cep}
           value={props.value ? props.value : null}
         />
       )}

@@ -5,7 +5,6 @@ import { faDollarSign, faChartSimple, faChartLine, faMagnifyingGlassDollar } fro
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import "../../styles/landingPage.scss";
-import "../../styles/globals.css";
 
 const Services = () => {
   const texts = {

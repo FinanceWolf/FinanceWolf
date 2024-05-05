@@ -12,7 +12,7 @@ const Header = ({mode, id}) => {
       <a href="/">
         <h1 className="text-2xl select-none">
           <FontAwesomeIcon icon={faChartColumn} />
-          <span>Finance Wealth</span> 
+          <span>Finance Wolf</span> 
         </h1>
       </a>
       <nav className="header__rightside">
@@ -20,12 +20,12 @@ const Header = ({mode, id}) => {
 
           ?
 
-          <ul className="header__rightside__pages">
+          <ul className="header__rightsidePages">
             <li><a href="./pages/login" className="option">Ações</a></li>
             <li><a href="./pages/login" className="option">Contato</a></li>
             <li><a href="./pages/login" className="option">Sobre nós</a></li>
             <li><a href="./pages/login" className="option">FAQ</a></li>
-            <li><a href="./pages/login" className="option login__button">Entrar</a></li>
+            <li><a href="./pages/login" className="login__button">Entrar</a></li>
             <li className="create_account"><a href="./pages/register">Criar sua conta</a></li>
             <li><FaGlobe className="language_section"/></li>
           </ul>

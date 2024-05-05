@@ -1,16 +1,14 @@
 "use client"
 
 import Header from "./components/Header/Header";
-//import Login from "./components/login/page";
-import Parallax from "./components/parallax/Parallax";
 import Portfolio from "./components/landing/Services";
-import Footer from "./components/Footer/Footer";
-import { useState } from 'react';
-import { alter } from './ReduxStore/selectedLanguage/language';
+import Footer from "./components/Footer/Footer"
 import {useDispatch, useSelector} from 'react-redux';
+import { WelcomePage } from "./components/WelcomePage/WelcomePage";
+import  Stock  from "./components/Stock/Stock";
 import './styles/home.scss';
 import './styles/landingPage.scss';
-import { WelcomePage } from "./components/WelcomePage/WelcomePage";
+import './styles/defaults.scss';
 
 export default function Home() {
   const language = useSelector(state => state.language.value);
@@ -28,11 +26,11 @@ export default function Home() {
       <main id="landingPage">
 
           <WelcomePage />
+          <Stock />
           <Portfolio />
-
       </main>
 
-{/*       <Footer /> */}
+      <Footer />
     </>
   );
 };

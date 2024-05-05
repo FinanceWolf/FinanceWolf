@@ -18,33 +18,38 @@ async function Login() {
     return(
         <form method="POST">
             <div id="inputBox" className="flex flex-col">
-                <InputContainer type="text" id="nome" name="nome" className="userInput" placeholder={translation.RegisterSection.nameplaceholder} label={translation.RegisterSection.name} />
-
-                <InputContainer type="email" id="email" name="email" className="userInput" placeholder={translation.LoginSection.emailplaceholder} label="Email" />
-
-                <div className="inputContainer passwordContainer">
-                    <InputContainer type="password" id="password" name="password" className="userInput" placeholder={translation.LoginSection.passwordplaceholder} label={translation.RegisterSection.password} />
-
-                    <InputContainer type="password" id="confPass" name="confPass" className="userInput" placeholder={translation.RegisterSection.passwordplaceholder} label={translation.RegisterSection.confirmPassword} />
+                <div className="inputsRow">
+                    <InputContainer type="text" id="nome" name="nome" placeholder={translation.RegisterSection.nameplaceholder} label={translation.RegisterSection.name} />
                 </div>
 
-                <InputContainer type="select" selectDefault={translation.RegisterSection.selectDefault} options={[{
+                <div className="inputsRow">
+                    <InputContainer type="email" id="email" name="email" placeholder={translation.LoginSection.emailplaceholder} label="Email" />
+                </div>
+
+                <div className="inputsRow">
+                    <InputContainer type="text" id="CPF" name="CPF" placeholder="CPF" label="CPF" />
+                    <InputContainer type="text" id="RG" name="RG" placeholder="RG" label="RG" />
+                </div>
+
+                <div className="inputsRow">
+                    <InputContainer type="password" id="password" name="password" placeholder={translation.LoginSection.passwordplaceholder} label={translation.RegisterSection.password} />
+
+                    <InputContainer type="password" id="confPass" name="confPass" placeholder={translation.RegisterSection.passwordplaceholder} label={translation.RegisterSection.confirmPassword} />
+                </div>
+
+                <div className="inputsRow">
+                    <InputContainer type="date" className="date" label={translation.RegisterSection.birthdate} />
+                </div>
+
+                {/* <InputContainer type="select" selectDefault={translation.RegisterSection.selectDefault} options={[{
                         value: 'CPF',
                         option: 'CPF'
-                    }]} id="identityDocument" name="identityDocument" required="true" label={translation.RegisterSection.identityDocument} className="registerSelect" />
-
-                    
-
-                    {/* <InputContainer type="select" id="country" name="country" options={countries} /> */}
+                    }]} id="identityDocument" name="identityDocument" required="true" label={translation.RegisterSection.identityDocument} className="registerSelect"
+                /> */}
             </div>
-            <input type="submit" value={translation.RegisterSection.submit} className="inputSubmit" />
+            <input type="submit" value={translation.RegisterSection.submit} />
         </form>
     );
 };
-
-{/* <div className="checkboxContainer">
-<input type="checkbox" name="keepLogin" id="keepLogin" />
-<label for="keepLogin">{translation.LoginSection.keepLogin}</label>
-</div> */}
 
 export default Login;

@@ -1,12 +1,66 @@
-@import url(globals.css);
 @import 'functions/generalFuncs.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-$corPrincipal: #069e2d;
-$corPrincipalSuave: #058e3f;
-$corPrincipalForte: #005c02;
+$corPrincipal: #e2c000;
 $corPrincipal2: #03440c;
+$corPrincipalSuave: #f2df4c;
+$corPrincipalForte: #e4b61a;
+$textColorWhite: #E9EAEC;
+$textColorBlack: #000;
 
 $borderRadiusPadrao: 10px;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400;1,500;1,700&display=swap');
+
+/* RESET */
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+    }
+  }
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  color: black;
+  font-family: "Poppins";
+}
+
+.gradiente {
+  background: rgb(255,255,255); /* O fundo precisa ser branco */
+  background: linear-gradient(125deg, rgba(255,255,255,1) 0%, rgba(75,255,78,1) 52%, rgba(0,55,152,1) 100%); /* Gradiente na prática */  
+}
+
+p {
+  color: var(--cor-principal-2); 
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+/* =========== */
 
 h1 {
     color: $corPrincipalSuave;
@@ -14,6 +68,10 @@ h1 {
 
 h1 span {
     color: $corPrincipal;
+}
+
+a {
+    color: black;
 }
 
 .container {
@@ -55,3 +113,5 @@ h1 span {
         }
     }
 }
+
+// https://coolors.co/0b0c0c-2a2e34-e9eaec-f2e690-fbe134-e4b61a

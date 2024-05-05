@@ -3,9 +3,10 @@ import "../../styles/welcomePage.scss";
 
 export const WelcomePage = () => {
   return (
-    <section className="welcome__page">
-      <div className="welcome__page__text__box">
-        <h1>Minha pomba te encanta</h1>
+    <section className="welcomePage">
+      <div className="welcomePage__textBox">
+        <h1>Finance Wolf</h1>
+        <p className="textBox__subtitle">A minha pomba te encanta</p>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
           aspernatur rem saepe ipsam est sit voluptate, quo quibusdam ab sunt,
@@ -13,12 +14,13 @@ export const WelcomePage = () => {
         </p>
         <a href="">Abrir agora</a>
       </div>
-      {/* <span className="welcome__page__image">
+            <span className="welcomePage__image">
         <img
-          src="images/wolf/_25df0ee9-c3a3-41bd-a307-d0525193e573.jpg"
+          src="images/wolf/wolfSilhueta.png"
           alt=""
-        />{" "}
-      </span> */}
+        />
+      </span>
+
     </section>
   );
 };

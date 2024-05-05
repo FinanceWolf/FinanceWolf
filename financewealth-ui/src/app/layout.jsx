@@ -2,7 +2,6 @@
 import styled, { css } from 'styled-components'; */
 import { stock } from "./ReduxStore/stock";
 import StoreProvider from "./reduxProvider";
-import "./styles/globals.css";
 
 // const inter = Inter({ subsets: ["latin"] });
 

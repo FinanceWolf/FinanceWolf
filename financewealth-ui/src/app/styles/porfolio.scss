@@ -30,6 +30,8 @@
     display: flex;
     flex-direction: row;
     margin: 0 auto !important;
+    flex-wrap: wrap ;
+    
     h1 {
         font-size: 45px;
     }

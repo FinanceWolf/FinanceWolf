@@ -6,13 +6,13 @@ import { increment, decrement } from "../../ReduxStore/testing/slicerTesting";
 import { motion } from "framer-motion";
 import { useEffect, useState } from 'react';
 import { AddressForm } from "@/app/components/User/register/AddressForm";
+import Stock from "@/app/components/Stock/Stock";
 
 const Tests = () => {
-    const counter = useSelector(state => state.counter.value);
-    const dispatch = useDispatch();
+
     return (
         <>
-            <AddressForm />
+            <Stock />
         </>
 
     )

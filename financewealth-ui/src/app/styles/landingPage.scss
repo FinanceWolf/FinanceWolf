@@ -1,125 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,700;1,200;1,400;1,500;1,700&display=swap");
 
-@import 'defaults.scss';
+@import "defaults.scss";
 
 .section__services {
-    background-color: #f0f0f0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 50px;
+  background-color: #e9eaec;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 30px 50px 50px 50px;
 }
 
-.title__services{ 
-    display: flex;
-    position: relative;
-    justify-content: center;
-    font-size: 45px;
-    margin: 15px;
+.title__services {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  font-size: 45px;
+  margin: 10px;
+  padding: 5px;
+  color: black;
 
-    &:after {
-        content: '';
-        position: absolute;
-        width: 12%;
-        height: 5px;
-        background-color: $corPrincipal;
-        bottom: -2px;
-    }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 12%;
+    height: 5px;
+    background-color: $corPrincipal;
+    bottom: -2px;
+  }
 }
 
 .container__services {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto !important;
+  flex-wrap: wrap;
+
+  h1 {
+    font-size: 45px;
+  }
+
+  .block__services {
     display: flex;
-    flex-direction: row;
-    margin: 0 auto !important;
+    align-items: center;
+    flex-direction: column;
+    width: 25em;
+    margin: 12px;
 
-    h1 {
-        font-size: 45px;
-    }
-
-    .block__services {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: 25em;
-        margin: 12px;
-
-        .icon__box {
-            cursor: pointer;
-
-            &:hover {
-                @include transition(120ms);
-                background-color: #c7f0c2;
-            }
-        }
-        
-        .description_box {
-            text-align: center;
-        } 
-    
-        h3 {
-            font-weight: 500;
-            font-size: 25px;
-            margin: 25px;
-        }
-    
-        img {
-            width: 140px;
-        }
-    
-        svg{
-            width: 75px;
-            height: 75px;
-            color: black;
-        }
-    
-        p {
-            color: #b8b8b8;
-        }
-    }
-
-    .selected {
-        .icon__box {
-            background-color: $corPrincipalSuave;
-            transition: 250ms;
-
-            &:hover {
-                background-color: $corPrincipalSuave
-            }
-        }
-    
-        h3 {
-            position: relative;
-            text-align: center;
-        
-            &:after {
-                content: '';
-                position: absolute;
-                height: 4px;
-                width: 46px;
-                right: 40%;
-                background-color: $corPrincipal;
-                bottom: -5px;
-            }
-        }
-    
-        svg{
-            color: white;
-        }
-    
-        p {
-            color: black;
-        }
-    }
-    
     .icon__box {
-        background-color: #dddddd;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 300px;
-        height: 200px;
+      cursor: pointer;
+
+      &:hover {
+        @include transition(120ms);
+        background-color: $corPrincipalSuave;
+      }
     }
+
+    .description_box {
+      text-align: center;
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 25px;
+      margin: 25px;
+    }
+
+    img {
+      width: 140px;
+    }
+
+    svg {
+      width: 75px;
+      height: 75px;
+      color: black;
+    }
+
+    p {
+      color: #b8b8b8;
+    }
+  }
+
+  .selected {
+    .icon__box {
+      background-color: $corPrincipal;
+      transition: 250ms;
+
+      &:hover {
+        background-color: $corPrincipal;
+      }
+    }
+
+    h3 {
+      position: relative;
+      text-align: center;
+
+      &:after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: 46px;
+        right: 40%;
+        background-color: $corPrincipal;
+        bottom: -5px;
+      }
+    }
+
+    svg {
+      color: white;
+    }
+
+    p {
+      color: black;
+    }
+  }
+
+  .icon__box {
+    background-color: #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+  }
 }
 
 // body {

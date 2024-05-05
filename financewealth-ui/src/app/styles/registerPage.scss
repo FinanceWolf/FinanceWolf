@@ -5,9 +5,20 @@
     gap: 20px;
 }
 
+#loginSection {
+    width: 55%;
+
+    .internalLoginSection {
+        gap: 32px;
+    }
+}
+
+#lateralSection {
+    width: 45%;
+}
+
 .inputContainer {
     position: relative;
-    /* border: 1px solid red; */
 
     label {
         position: relative;
@@ -27,4 +38,14 @@ input[type=text], input[type=email], input[type=password], .userInput {
     border: 2px solid $corPrincipal;
     border-radius: 3px;
     width: 142px;
+}
+
+.inputsRow {
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+
+    .inputContainer {
+        width: 100%;
+    }
 }
