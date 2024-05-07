@@ -7,17 +7,208 @@ const Stock = () => {
       <section className="stockSection">
         <div className="stockWrapper">
           <section className="cardSection">
-            <span><button href="" className="cardSection__button">Populares</button></span>
-            <span><button href="" className="cardSection__button">Maiores altas</button></span>
-            <span><button href="" className="cardSection__button">Maiores baixas</button></span>
+            {/* need to change that */}
+            <span className="cardSection__spanButton">
+              <button href="" className="cardSection__button">
+                Populares
+              </button>
+            </span>
+            <span className="cardSection__spanButton">
+              <button href="" className="cardSection__button">
+                Maiores altas
+              </button>
+            </span>
+            <span className="cardSection__spanButton">
+              <button href="" className="cardSection__button">
+                Maiores baixas
+              </button>
+            </span>
 
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
+            <div className="cardSection__card">
+              <div className="stock">
+                <div className="icon"></div>
 
-            <div className="card"></div>
-            <div className="card"></div>
-            <div className="card"></div>
+                <div className="stock__names">
+                  <div className="code"></div>
+                  <div className="name"></div>
+                </div>
+
+                <div className="price"></div>
+                <div className="perc"></div>
+              </div>
+
+              <div className="stock">
+                <div className="icon"></div>
+
+                <div className="stock__names">
+                  <div className="code"></div>
+                  <div className="name"></div>
+                </div>
+
+                <div className="price"></div>
+                <div className="perc"></div>
+              </div>
+
+              <div className="stock">
+                <div className="icon"></div>
+
+                <div className="stock__names">
+                  <div className="code"></div>
+                  <div className="name"></div>
+                </div>
+
+                <div className="price"></div>
+                <div className="perc"></div>
+              </div>
+
+              <div className="stock">
+                <div className="icon"></div>
+
+                <div className="stock__names">
+                  <div className="code"></div>
+                  <div className="name"></div>
+                </div>
+
+                <div className="price"></div>
+                <div className="perc"></div>
+              </div>
+
+              <div className="stock">
+                <div className="icon"></div>
+
+                <div className="stock__names">
+                  <div className="code"></div>
+                  <div className="name"></div>
+                </div>
+
+                <div className="price"></div>
+                <div className="perc"></div>
+              </div>
+            </div>
+
+            <div className="cardSection__card">
+              <div className="stock">
+                <div className="icon"></div>
+
+                <div className="stock__names">
+                  <div className="code"></div>
+                  <div className="name"></div>
+                </div>
+
+                <div className="price"></div>
+                <div className="perc"></div>
+              </div>
+
+              <div className="stock">
+                <div className="icon"></div>
+
+                <div className="stock__names">
+                  <div className="code"></div>
+                  <div className="name"></div>
+                </div>
+
+                <div className="price"></div>
+                <div className="perc"></div>
+              </div>
+
+              <div className="stock">
+                <div className="icon"></div>
+
+                <div className="stock__names">
+                  <div className="code"></div>
+                  <div className="name"></div>
+                </div>
+
+                <div className="price"></div>
+                <div className="perc"></div>
+              </div>
+
+              <div className="stock">
+                <div className="icon"></div>
+
+                <div className="stock__names">
+                  <div className="code"></div>
+                  <div className="name"></div>
+                </div>
+
+                <div className="price"></div>
+                <div className="perc"></div>
+              </div>
+
+              <div className="stock">
+                <div className="icon"></div>
+
+                <div className="stock__names">
+                  <div className="code"></div>
+                  <div className="name"></div>
+                </div>
+
+                <div className="price"></div>
+                <div className="perc"></div>
+              </div>
+            </div>
+
+            <div className="cardSection__card">
+              <div className="stock">
+                <div className="icon"></div>
+
+                <div className="stock__names">
+                  <div className="code"></div>
+                  <div className="name"></div>
+                </div>
+
+                <div className="price"></div>
+                <div className="perc"></div>
+              </div>
+
+              <div className="stock">
+                <div className="icon"></div>
+
+                <div className="stock__names">
+                  <div className="code"></div>
+                  <div className="name"></div>
+                </div>
+
+                <div className="price"></div>
+                <div className="perc"></div>
+              </div>
+
+              <div className="stock">
+                <div className="icon"></div>
+
+                <div className="stock__names">
+                  <div className="code"></div>
+                  <div className="name"></div>
+                </div>
+
+                <div className="price"></div>
+                <div className="perc"></div>
+              </div>
+
+              <div className="stock">
+                <div className="icon"></div>
+
+                <div className="stock__names">
+                  <div className="code"></div>
+                  <div className="name"></div>
+                </div>
+
+                <div className="price"></div>
+                <div className="perc"></div>
+              </div>
+
+              <div className="stock">
+                <div className="icon"></div>
+
+                <div className="stock__names">
+                  <div className="code"></div>
+                  <div className="name"></div>
+                </div>
+
+                <div className="price"></div>
+                <div className="perc"></div>
+              </div>
+            </div>
           </section>
           <div className="stockSection__title">
             <h1>Descubra o melhor jeito de investir</h1>
