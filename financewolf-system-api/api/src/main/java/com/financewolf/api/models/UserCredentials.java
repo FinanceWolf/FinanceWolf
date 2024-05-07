@@ -10,6 +10,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "user_credentials")
@@ -40,8 +41,11 @@ public class UserCredentials {
     @OneToOne
     @JoinColumn(name = "idPassword")
     private UserPassword idPassword;
-    
-    @Column (name = "datareg", nullable = false)
+
+    @Transient
+    private String password;
+
+    @Column (name = "datareg", nullable = false/* , columnDefinition = "TIMESTAMP" */)
     private Date registerDate; // Alterar depois
 
     public Long getId() {
@@ -108,13 +112,28 @@ public class UserCredentials {
         this.registerDate = registerDate;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
+        result = prime * result + ((idUser == null) ? 0 : idUser.hashCode());
+        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        result = prime * result + ((username == null) ? 0 : username.hashCode());
         result = prime * result + ((email == null) ? 0 : email.hashCode());
         result = prime * result + ((rg == null) ? 0 : rg.hashCode());
         result = prime * result + ((cpf == null) ? 0 : cpf.hashCode());
+        result = prime * result + ((birthdate == null) ? 0 : birthdate.hashCode());
+        result = prime * result + ((idPassword == null) ? 0 : idPassword.hashCode());
+        result = prime * result + ((password == null) ? 0 : password.hashCode());
+        result = prime * result + ((registerDate == null) ? 0 : registerDate.hashCode());
         return result;
     }
 
@@ -127,6 +146,21 @@ public class UserCredentials {
         if (getClass() != obj.getClass())
             return false;
         UserCredentials other = (UserCredentials) obj;
+        if (idUser == null) {
+            if (other.idUser != null)
+                return false;
+        } else if (!idUser.equals(other.idUser))
+            return false;
+        if (name == null) {
+            if (other.name != null)
+                return false;
+        } else if (!name.equals(other.name))
+            return false;
+        if (username == null) {
+            if (other.username != null)
+                return false;
+        } else if (!username.equals(other.username))
+            return false;
         if (email == null) {
             if (other.email != null)
                 return false;
@@ -141,6 +175,26 @@ public class UserCredentials {
             if (other.cpf != null)
                 return false;
         } else if (!cpf.equals(other.cpf))
+            return false;
+        if (birthdate == null) {
+            if (other.birthdate != null)
+                return false;
+        } else if (!birthdate.equals(other.birthdate))
+            return false;
+        if (idPassword == null) {
+            if (other.idPassword != null)
+                return false;
+        } else if (!idPassword.equals(other.idPassword))
+            return false;
+        if (password == null) {
+            if (other.password != null)
+                return false;
+        } else if (!password.equals(other.password))
+            return false;
+        if (registerDate == null) {
+            if (other.registerDate != null)
+                return false;
+        } else if (!registerDate.equals(other.registerDate))
             return false;
         return true;
     }

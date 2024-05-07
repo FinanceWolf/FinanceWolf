@@ -17,19 +17,16 @@ public class UserPassword {
     private Long idPassword;
 
     @Column(nullable = false, length = 172)
-    private String passwordHash;
+    private String passwordHash; // Senha criptografada em hexadecimal
 
     @Column(nullable = false, length = 44)
-    private String passwordSalt;
+    private String passwordSalt; // Senha criptografada em tipo de cripografia "embaralhada"
 
     @Column(nullable = false, columnDefinition = "tinyint" /* defaultValue = 0 */)
-    private int resetStatus;
+    private int resetStatus; // Saber se a pessoa já resetou a senha
 
-    @Column(length = 8)
-    private String resetCode;
-
-    @Column(columnDefinition = "timestamp")
-    private Date resetExpiration;
+    @Column(/* columnDefinition = "timestamp" */)
+    private Date resetExpiration; // Guarda a informação de quando o usuário trocou a senha pela última vez
 
     public Long getIdPassword() {
         return idPassword;
@@ -61,14 +58,6 @@ public class UserPassword {
 
     public void setResetStatus(int resetStatus) {
         this.resetStatus = resetStatus;
-    }
-
-    public String getResetCode() {
-        return resetCode;
-    }
-
-    public void setResetCode(String resetCode) {
-        this.resetCode = resetCode;
     }
 
     public Date getResetExpiration() {
