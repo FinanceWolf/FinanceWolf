@@ -42,6 +42,14 @@ public class UserController {
         return ResponseEntity.ok().body(userFound);
     }
 
+    @PostMapping("/findUser")
+    @Validated
+    public ResponseEntity<UserCredentials> findUser(@RequestBody String email) {
+        UserCredentials userFound = this.userServices.findByEmail(email);
+
+        return ResponseEntity.ok().body(userFound);
+    }
+
     @PostMapping("/create")
     @Validated
     public ResponseEntity<Void> createUser(@RequestBody UserCredentials userReceivedInfo) {
