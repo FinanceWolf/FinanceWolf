@@ -16,7 +16,7 @@ public class PasswordServices {
     @Autowired
     private PasswordRepository passwordRepository;
 
-    public Long createPassword(String password) {
+    public UserPassword createPassword(String password) {
         UserPassword passwordModel = new UserPassword();
         Date date = new Date();
 
@@ -27,6 +27,7 @@ public class PasswordServices {
 
         this.passwordRepository.save(passwordModel);
 
-        return passwordModel.getIdPassword();
+        /* return passwordModel.getIdPassword(); */
+        return passwordModel;
     }
 }

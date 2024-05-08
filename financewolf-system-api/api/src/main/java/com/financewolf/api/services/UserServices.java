@@ -32,10 +32,9 @@ public class UserServices {
     public UserCredentials createUser(UserCredentials userReceivedData) {
         userReceivedData.setId(null); // Vai impedir que, de alguma forma, o ID seja inserido préviamente na criação do user
 
-        System.out.println("A PORRA DA SENHA: " + userReceivedData.getPassword());
+        UserPassword passId = this.passwordService.createPassword(userReceivedData.getPassword());
 
-        this.passwordService.createPassword(userReceivedData.getPassword());
-
+        userReceivedData.setIdPassword(passId);
         this.userRepository.save(userReceivedData);
         return userReceivedData;
     }

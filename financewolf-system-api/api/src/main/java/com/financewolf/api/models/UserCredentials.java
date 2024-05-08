@@ -120,6 +120,14 @@ public class UserCredentials {
         this.password = password;
     }
 
+    public UserPassword getPasswordId() {
+        return idPassword;
+    }
+
+    public void setPassword(UserPassword idPass) {
+        this.idPassword = idPass;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -197,5 +205,21 @@ public class UserCredentials {
         } else if (!registerDate.equals(other.registerDate))
             return false;
         return true;
+    }
+
+    public Long getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(Long idUser) {
+        this.idUser = idUser;
+    }
+
+    public UserPassword getIdPassword() {
+        return idPassword;
+    }
+
+    public void setIdPassword(UserPassword idPassword) {
+        this.idPassword = idPassword;
     }
 }
