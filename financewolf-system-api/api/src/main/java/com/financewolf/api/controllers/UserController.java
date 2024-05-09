@@ -6,16 +6,15 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.financewolf.api.models.UserCredentials;
 
 import java.net.URI;
-import java.util.Optional;
 
+import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
+import org.springframework.jdbc.datasource.UserCredentialsDataSourceAdapter;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.financewolf.api.services.UserServices;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -42,13 +41,14 @@ public class UserController {
         return ResponseEntity.ok().body(userFound);
     }
 
-    @PostMapping("/findUser")
-    @Validated
-    public ResponseEntity<UserCredentials> findUser(@RequestBody String email) {
-        UserCredentials userFound = this.userServices.findByEmail(email);
+    @PostMapping("/login")
+    public ResponseEntity<UserCredentials> userLogin(@RequestBody UserCredentials loginInfo) {
+        UserCredentials login = this.userServices.loginUser(loginInfo);
 
-        return ResponseEntity.ok().body(userFound);
+        return ResponseEntity.ok().body(login);
     }
+
+
 
     @PostMapping("/create")
     @Validated

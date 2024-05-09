@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.financewolf.api.models.UserCredentials;
 import com.financewolf.api.models.UserPassword;
 import com.financewolf.api.repositories.UserRepository;
-import com.financewolf.api.services.PasswordServices;
 
 import jakarta.transaction.Transactional;
 
@@ -29,11 +28,24 @@ public class UserServices {
     }
 
     public UserCredentials findByEmail(String email) {
-        Optional<UserCredentials> userFound = this.userRepository.findByEmail(email);
+        UserCredentials userFound = this.userRepository.findByEmail(email);
 
-        System.out.println("PIMBAS: " + email);
+        System.out.println("Email recebido: " + email);
 
-        return userFound.orElseThrow(() -> new RuntimeException(String.format("O usuário com o email %s não foi encontrado.", email)));
+        return userFound; /* .orElseThrow(() -> new RuntimeException(String.format("O usuário com o email %s não foi encontrado.", email))); */
+    }
+
+    public UserCredentials loginUser(UserCredentials loginInfo) {
+        UserCredentials userFound = this.userRepository.findByEmail(loginInfo.getEmail());
+
+        System.out.println("Email foi encontrado! (" + userFound.getEmail() + ")");
+        UserPassword userPassword = this.passwordService.findById(userFound.getIdPassword().getId());
+
+        if(loginInfo.getPassword().equals(userPassword.getPasswordHash())) {
+            System.out.println("As senhas batem, o login pode ser feito.");
+        }
+
+        return userFound;
     }
 
     @Transactional

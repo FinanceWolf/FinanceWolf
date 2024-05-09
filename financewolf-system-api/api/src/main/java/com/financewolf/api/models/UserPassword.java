@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 public class UserPassword {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idPassword;
+    private Long id;
 
     @Column(nullable = false, length = 172)
     private String passwordHash; // Senha criptografada em hexadecimal
@@ -28,12 +28,12 @@ public class UserPassword {
     @Column(/* columnDefinition = "timestamp" */)
     private Date resetExpiration; // Guarda a informação de quando o usuário trocou a senha pela última vez
 
-    public Long getIdPassword() {
-        return idPassword;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdPassword(Long idPassword) {
-        this.idPassword = idPassword;
+    public void setId(Long idPassword) {
+        this.id = idPassword;
     }
 
     public String getPasswordHash() {

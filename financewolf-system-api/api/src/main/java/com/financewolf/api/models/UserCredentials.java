@@ -120,12 +120,12 @@ public class UserCredentials {
         this.password = password;
     }
 
-    public UserPassword getPasswordId() {
+    public UserPassword getIdPassword() {
         return idPassword;
     }
 
-    public void setPassword(UserPassword idPass) {
-        this.idPassword = idPass;
+    public void setIdPassword(UserPassword idPassword) {
+        this.idPassword = idPassword;
     }
 
     @Override
@@ -205,21 +205,5 @@ public class UserCredentials {
         } else if (!registerDate.equals(other.registerDate))
             return false;
         return true;
-    }
-
-    public Long getIdUser() {
-        return idUser;
-    }
-
-    public void setIdUser(Long idUser) {
-        this.idUser = idUser;
-    }
-
-    public UserPassword getIdPassword() {
-        return idPassword;
-    }
-
-    public void setIdPassword(UserPassword idPassword) {
-        this.idPassword = idPassword;
     }
 }
