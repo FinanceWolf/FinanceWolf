@@ -38,14 +38,21 @@ public class UserServices {
     public UserCredentials loginUser(UserCredentials loginInfo) {
         UserCredentials userFound = this.userRepository.findByEmail(loginInfo.getEmail());
 
-        System.out.println("Email foi encontrado! (" + userFound.getEmail() + ")");
+        if(userFound == null) {
+            System.out.println(String.format("Usuário com email %s não existe.", loginInfo.getEmail()));
+
+            return loginInfo; // Retornamos o próprio loginInfo pois ele não tem ID. Se um modelo de usuário preenchido não tiver a informação de ID, significa que ele não existe.
+        }
+
         UserPassword userPassword = this.passwordService.findById(userFound.getIdPassword().getId());
 
         if(loginInfo.getPassword().equals(userPassword.getPasswordHash())) {
             System.out.println("As senhas batem, o login pode ser feito.");
-        }
 
-        return userFound;
+            return userFound;
+        } else {
+            return loginInfo; // Mesma situação lá em cima. O loginInfo não possui ID.
+        }
     }
 
     @Transactional

@@ -1,6 +1,8 @@
 package com.financewolf.api.models;
 
-import java.sql.Date;
+import java.util.Date;
+
+import org.hibernate.annotations.CreationTimestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
@@ -10,6 +12,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import jakarta.persistence.Transient;
 
 @Entity
@@ -45,8 +49,9 @@ public class UserCredentials {
     @Transient
     private String password;
 
-    @Column (name = "datareg", nullable = false/* , columnDefinition = "TIMESTAMP" */)
-    private Date registerDate; // Alterar depois
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column (name = "datareg", nullable = false)
+    private Date registerDate;
 
     public Long getId() {
         return idUser;

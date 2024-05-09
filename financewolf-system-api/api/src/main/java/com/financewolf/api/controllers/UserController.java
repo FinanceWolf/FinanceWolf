@@ -9,6 +9,8 @@ import java.net.URI;
 
 import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.datasource.UserCredentialsDataSourceAdapter;
 import org.springframework.validation.annotation.Validated;
@@ -45,7 +47,11 @@ public class UserController {
     public ResponseEntity<UserCredentials> userLogin(@RequestBody UserCredentials loginInfo) {
         UserCredentials login = this.userServices.loginUser(loginInfo);
 
-        return ResponseEntity.ok().body(login);
+        if(login.getId() != null) {
+            return ResponseEntity.ok().body(login);
+        }
+
+        return new ResponseEntity<UserCredentials>(HttpStatus.NO_CONTENT);
     }
 
 
