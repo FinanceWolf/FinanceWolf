@@ -3,6 +3,7 @@ package com.financewolf.api.controllers;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.financewolf.api.models.UserAddress;
 import com.financewolf.api.models.UserCredentials;
 
 import java.net.URI;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.financewolf.api.services.AddressServices;
 import com.financewolf.api.services.UserServices;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,6 +32,9 @@ public class UserController {
 
     @Autowired
     private UserServices userServices;
+
+    @Autowired
+    private AddressServices addressServices;
 
 /*     @GetMapping("/")
     public ResponseEntity<UserCredentials> getAllAcounts() {
@@ -54,8 +59,6 @@ public class UserController {
         return new ResponseEntity<UserCredentials>(HttpStatus.NO_CONTENT);
     }
 
-
-
     @PostMapping("/create")
     @Validated
     public ResponseEntity<Void> createUser(@RequestBody UserCredentials userReceivedInfo) {
@@ -63,6 +66,15 @@ public class UserController {
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(userReceivedInfo.getId()).toUri();
 
+        return ResponseEntity.created(uri).build();
+    }
+
+    @PostMapping("/create/address")
+    @Validated
+    public ResponseEntity<Void> createAddress(@RequestBody UserAddress userAddress) {
+        addressServices.createAddress(userAddress);
+
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(userAddress.getIdEnd()).toUri();
         return ResponseEntity.created(uri).build();
     }
 }
