@@ -8,6 +8,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 
 @Entity
 @Table(name = "password")
@@ -25,8 +27,9 @@ public class UserPassword {
     @Column(nullable = false, columnDefinition = "tinyint" /* defaultValue = 0 */)
     private int resetStatus; // Saber se a pessoa já resetou a senha
 
-    @Column(/* columnDefinition = "timestamp" */)
-    private Date resetExpiration; // Guarda a informação de quando o usuário trocou a senha pela última vez
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "alteradaEm", nullable = false)
+    private Date lastTimeChanged; // Guarda a informação de quando o usuário trocou a senha pela última vez
 
     public Long getId() {
         return id;
@@ -60,12 +63,12 @@ public class UserPassword {
         this.resetStatus = resetStatus;
     }
 
-    public Date getResetExpiration() {
-        return resetExpiration;
+    public Date getlastTimeChanged() {
+        return lastTimeChanged;
     }
 
-    public void setResetExpiration(Date resetExpiration) {
-        this.resetExpiration = resetExpiration;
+    public void setLastTimeChanged(Date lastTimeChanged) {
+        this.lastTimeChanged = lastTimeChanged;
     }
 
     @Override

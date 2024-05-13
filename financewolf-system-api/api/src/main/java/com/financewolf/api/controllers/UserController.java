@@ -69,12 +69,5 @@ public class UserController {
         return ResponseEntity.created(uri).build();
     }
 
-    @PostMapping("/create/address")
-    @Validated
-    public ResponseEntity<Void> createAddress(@RequestBody UserAddress userAddress) {
-        addressServices.createAddress(userAddress);
 
-        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(userAddress.getIdEnd()).toUri();
-        return ResponseEntity.created(uri).build();
-    }
 }

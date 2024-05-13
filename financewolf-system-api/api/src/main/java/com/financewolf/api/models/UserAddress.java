@@ -38,7 +38,7 @@ public class UserAddress {
 
     @OneToOne
     @JoinColumn(name = "idUser")
-    private UserPassword end_idUser;
+    private UserCredentials end_idUser;
 
 
     public Long getIdEnd() {
@@ -97,11 +97,11 @@ public class UserAddress {
         this.state = state;
     }
 
-    public UserPassword getEnd_idUser() {
+    public UserCredentials getEnd_idUser() {
         return end_idUser;
     }
 
-    public void setEnd_idUser(UserPassword idUser) {
+    public void setEnd_idUser(UserCredentials idUser) {
         this.end_idUser = idUser;
     }
 

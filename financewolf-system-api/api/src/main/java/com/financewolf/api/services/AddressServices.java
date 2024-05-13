@@ -3,7 +3,6 @@ package com.financewolf.api.services;
 import com.financewolf.api.models.UserAddress;
 import com.financewolf.api.models.UserCredentials;
 import com.financewolf.api.repositories.AddressRepository;
-import com.financewolf.api.repositories.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +23,7 @@ public class AddressServices {
     }
 
     @Transactional
-    public UserAddress createAddress(UserAddress userAdress) {
+    public UserAddress createAddress(UserAddress userAdress, UserCredentials id) {
         UserAddress newAddress = new UserAddress();
 
         newAddress.setCEP(userAdress.getCEP());
@@ -35,8 +34,6 @@ public class AddressServices {
         newAddress.setCity(userAdress.getCity());
         newAddress.setState(userAdress.getState());
         newAddress.setUf(userAdress.getUf());
-
-
 
         addressRepository.save(newAddress);
 

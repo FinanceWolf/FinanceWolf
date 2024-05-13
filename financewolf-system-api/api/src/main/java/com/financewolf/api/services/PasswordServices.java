@@ -32,7 +32,7 @@ public class PasswordServices {
         passwordModel.setPasswordHash(password);
         passwordModel.setPasswordSalt(password);
         passwordModel.setResetStatus(0);
-        passwordModel.setResetExpiration(date);
+        passwordModel.setLastTimeChanged(date);
 
         this.passwordRepository.save(passwordModel);
 

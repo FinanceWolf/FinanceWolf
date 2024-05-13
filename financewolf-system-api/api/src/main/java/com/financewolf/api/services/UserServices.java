@@ -1,5 +1,6 @@
 package com.financewolf.api.services;
 
+import java.util.Date;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,10 @@ public class UserServices {
 
     @Autowired
     private PasswordServices passwordService;
+    
+    @Autowired
+    private AddressServices addressServices;
+
 
     public UserCredentials findById(Long id) {
         Optional<UserCredentials> userFound = this.userRepository.findById(id);
@@ -63,8 +68,18 @@ public class UserServices {
         UserPassword passId = this.passwordService.createPassword(userReceivedData.getPassword());
         userReceivedData.setIdPassword(passId); 
 
+        Date date = new Date();
+        userReceivedData.setRegisterDate(date);
 
+        // Salvar informações na tabela de usuário
         this.userRepository.save(userReceivedData);
+
+        // Criar tabela de endereço do usuário.
+        UserCredentials idUsuario = new UserCredentials();
+        idUsuario.setId(userReceivedData.getId());
+
+        /* addressServices.createAddress(userReceivedData, idUsuario.getId()); */
+
         return userReceivedData;
     }
 }
