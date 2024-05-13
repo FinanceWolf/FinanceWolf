@@ -10,20 +10,43 @@
 
     .internalLoginSection {
         gap: 32px;
+
+        #internalLoginSection__registerOrientation {
+            display: flex;
+            justify-content: space-between;
+
+            .registerOrientation__pages {
+                display: flex;
+                gap: 8px;
+
+                li {
+                    transition: 150ms;
+                    text-align-last: center;
+                    padding-top: 10%;
+                    background-color: $corPrincipalSuave;
+                    width: 50px;
+                    height: 50px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $corPrincipal;
+                    }
+
+                    /* &:nth-child(3)::before {
+                        content: '';
+                        position: absolute;
+                        width: 6px;
+                        height: 2px;
+                        background-color: gray;
+                    } */
+                }
+            }
+        }
     }
 }
 
 #lateralSection {
     width: 45%;
-}
-
-.inputContainer {
-    position: relative;
-
-    label {
-        position: relative;
-        top: 8px;
-    }
 }
 
 input[type=text], input[type=email], input[type=password], .userInput {
@@ -44,6 +67,7 @@ input[type=text], input[type=email], input[type=password], .userInput {
     display: flex;
     gap: 32px;
     justify-content: space-between;
+    margin: 8px;
 
     .inputContainer {
         width: 100%;

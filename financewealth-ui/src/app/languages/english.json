@@ -16,7 +16,7 @@
         "nameplaceholder":"Your name",
         "emailplaceholder":"Your email",
         "rgplaceholder":"Your RG",
-        "cpflaceholder":"Your CPF",
+        "cpfplaceholder":"Your CPF",
         "birthdateplaceholder":"Your birthdate",
         "passwordplaceholder":"Your password",
         "confirmPassword":"Confirm your password",

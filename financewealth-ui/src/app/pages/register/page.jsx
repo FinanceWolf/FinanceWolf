@@ -1,5 +1,6 @@
-import RegisterForm from '../../components/User/register/RegisterForm';
 import { promises as fs } from 'fs';
+import RegisterForm from '../../components/User/register/RegisterForm';
+import { AddressForm } from '@/app/components/User/register/AddressForm';
 import '../../styles/registerPage.scss';
 
 async function Register() {
@@ -13,7 +14,14 @@ async function Register() {
             </section>
             <section id="loginSection">
                 <div className="internalLoginSection">
-                    <h2>{translation.RegisterSection.title}</h2>
+                    <div id="internalLoginSection__registerOrientation">
+                        <h2>{translation.RegisterSection.title}</h2>
+                        <ul className="registerOrientation__pages">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ul>
+                    </div>
                     <RegisterForm />
                     <a href='/pages/login' className="createAccount">{translation.RegisterSection.alreadyHaveAccount}</a>
                 </div>

@@ -15,7 +15,7 @@
         "nameplaceholder":"Prénom et nom",
         "emailplaceholder":"Adresse e-mail",
         "rgplaceholder":"",
-        "cpflaceholder":"",
+        "cpfplaceholder":"",
         "passwordplaceholder":"Nouveau mot de passe",
         "confirmPassword":"Confirmer le mot de passe",
         "submit":"Créer nouveau compte",

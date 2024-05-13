@@ -58,45 +58,6 @@ form {
     width: 100%;
 }
 
-.inputContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    height: 68px;
-    position: relative;
-}
-
-.inputContainer svg, .showPass {
-    position: absolute;
-    top: 9px;
-}
-
-.inputContainer svg {
-    left: 6px;
-    width: 16px;
-}
-
-.showPass {
-    top: 7px;
-    right: 2px;
-}
-
-.inputSubmit {
-    transition: 250ms;
-    background-color: $corPrincipalSuave !important;
-    align-self: start;
-    padding: 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    color: black;
-    margin-top: 16px;
-    /* margin: 0 auto; */
-
-    &:hover {
-        background-color: $corPrincipal !important;
-    }
-}
-
 .checkboxContainer {
     margin: 16px 0;
 }
@@ -149,4 +110,20 @@ input[type=number] {
 
 .login-pass {
     padding-right: 138px !important;
+}
+
+.inputSubmit {
+    transition: 250ms;
+    background-color: $corPrincipalSuave !important;
+    align-self: start;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: black;
+    margin-top: 16px;
+    /* margin: 0 auto; */
+
+    &:hover {
+        background-color: $corPrincipal !important;
+    }
 }
